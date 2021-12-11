@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "betterblockstates",
+  "version": "${version}",
+  "name": "BetterBlockStates",
+  "description": "A mod which changes some blockEntities to blockStates for performance & functionality reasons",
+  "authors": [
+    "FX - PR0CESS"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/betterBlockStates/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ca.fxco.betterblockstates.common.BetterBlockStates"
+    ]
+  },
+  "mixins": [
+    "betterblockstates.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.10",
+    "minecraft": [
+      "1.18",
+      "1.18.1"
+    ]
+  }
+}

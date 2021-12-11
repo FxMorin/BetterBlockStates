@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ca.fxco.betterblockstates.mixin",
+  "plugin": "ca.fxco.betterblockstates.mixin.MixinPlugin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "blocks.comparator.ComparatorBlock_BElessMixin",
+    "blocks.comparator.ComparatorBlockEntity_bypassMixin",
+    "blocks.sculksensor.SculkSensorBlock_BElessMixin",
+    "blocks.sculksensor.SculkSensorBlockEntity_bypassMixin",
+    "blocks.sculksensor.SculkSensorEventListener_tickableMixin",
+    "blocks.sculksensor.movable.PistonBlock_movableSculkMixin",
+    "skippable_block_entity.BlockEntity_skippableMixin",
+    "skippable_block_entity.ChunkSerializer_skippableMixin",
+    "blockstate_listeners.World_stateListenersMixin",
+    "blockstate_listeners.WorldChunk_stateListenersMixin",
+    "blockstate_listeners.WorldChunkGameEvents"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
