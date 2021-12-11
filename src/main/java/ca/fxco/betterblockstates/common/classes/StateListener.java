@@ -1,6 +1,7 @@
 package ca.fxco.betterblockstates.common.classes;
 
 import ca.fxco.betterblockstates.common.patches.BlockListener;
+import ca.fxco.betterblockstates.common.patches.WorldListeners;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -54,5 +55,9 @@ public class StateListener {
                 });
             }
         }
+    }
+
+    public static void onChunkUnload(World world, Chunk chunk) {
+        ((WorldListeners)world).removeListenersChunk(chunk.getPos());
     }
 }

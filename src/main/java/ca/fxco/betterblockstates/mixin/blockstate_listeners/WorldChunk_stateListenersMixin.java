@@ -28,7 +28,7 @@ public class WorldChunk_stateListenersMixin {
     }
 
 
-    /*@Inject(
+    @Inject(
             method = "setLoadedToWorld(Z)V",
             at = @At("HEAD")
     )
@@ -36,6 +36,6 @@ public class WorldChunk_stateListenersMixin {
         if (!loaded) {
             StateListener.onChunkUnload(self.getWorld(), self);
         }
-    }*/
+    }
 }
 

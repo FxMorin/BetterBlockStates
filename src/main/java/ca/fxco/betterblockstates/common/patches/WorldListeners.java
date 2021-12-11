@@ -16,6 +16,8 @@ public interface WorldListeners {
 
     public GameEventListener removeListener(BlockPos pos);
 
+    public void removeListenersChunk(ChunkPos chunkPos);
+
     public void removeTickingListener(GameEventListener listener);
 
     public void tickListeners();

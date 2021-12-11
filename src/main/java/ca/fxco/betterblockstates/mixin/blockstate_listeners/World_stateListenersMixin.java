@@ -63,6 +63,11 @@ public abstract class World_stateListenersMixin implements WorldListeners {
     }
 
     @Override
+    public void removeListenersChunk(ChunkPos chunkPos) {
+        blockListeners.remove(chunkPos);
+    }
+
+    @Override
     public GameEventListener removeListener(BlockPos pos) {
         return this.removeListener(new ChunkPos(pos),pos);
     }
