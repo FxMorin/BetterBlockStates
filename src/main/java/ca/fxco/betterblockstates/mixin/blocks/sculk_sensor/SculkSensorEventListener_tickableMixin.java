@@ -1,4 +1,4 @@
-package ca.fxco.betterblockstates.mixin.blocks.sculksensor;
+package ca.fxco.betterblockstates.mixin.blocks.sculk_sensor;
 
 import ca.fxco.betterblockstates.common.patches.TickableGameEventListener;
 import ca.fxco.betterblockstates.common.patches.WorldListeners;

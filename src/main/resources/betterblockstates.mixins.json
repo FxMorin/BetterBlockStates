@@ -7,15 +7,17 @@
   "mixins": [
     "blocks.comparator.ComparatorBlock_BElessMixin",
     "blocks.comparator.ComparatorBlockEntity_bypassMixin",
-    "blocks.sculksensor.SculkSensorBlock_BElessMixin",
-    "blocks.sculksensor.SculkSensorBlockEntity_bypassMixin",
-    "blocks.sculksensor.SculkSensorEventListener_tickableMixin",
-    "blocks.sculksensor.movable.PistonBlock_movableSculkMixin",
-    "skippable_block_entity.BlockEntity_skippableMixin",
-    "skippable_block_entity.ChunkSerializer_skippableMixin",
+    "blocks.daylight_detector.DaylightDetectorBlock_tickableMixin",
+    "blocks.sculk_sensor.SculkSensorBlock_BElessMixin",
+    "blocks.sculk_sensor.SculkSensorBlockEntity_bypassMixin",
+    "blocks.sculk_sensor.SculkSensorEventListener_tickableMixin",
+    "blocks.sculk_sensor.movable.PistonBlock_movableSculkMixin",
     "blockstate_listeners.World_stateListenersMixin",
     "blockstate_listeners.WorldChunk_stateListenersMixin",
-    "blockstate_listeners.WorldChunkGameEvents"
+    "blockstate_listeners.WorldChunkGameEvents",
+    "blockstate_tickers.World_stateTickerMixin",
+    "skippable_block_entity.BlockEntity_skippableMixin",
+    "skippable_block_entity.ChunkSerializer_skippableMixin"
   ],
   "injectors": {
     "defaultRequire": 1

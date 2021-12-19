@@ -28,16 +28,20 @@ public class Config {
         // Defines the default rules which can be configured by the user or other mods.
         // You must manually add a rule for any new mixins not covered by an existing package rule.
 
-        this.addMixinRule("blockstate_listeners", true);
-        this.addMixinRule("skippable_block_entity", true);
+        this.addMixinRule("blockstate_tickers", false);
+        this.addMixinRule("blockstate_listeners", false);
+        this.addMixinRule("skippable_block_entity", false);
 
+        this.addMixinRule("blocks.daylight_detector", false); //Not working yet
         this.addMixinRule("blocks.comparator", true);
-        this.addMixinRule("blocks.sculksensor", true);
-        this.addMixinRule("blocks.sculksensor.movable", false);
+        this.addMixinRule("blocks.sculk_sensor", true);
+        this.addMixinRule("blocks.sculk_sensor.movable", false);
 
+
+        this.addRuleDependency("blocks.daylight_detector", "blockstate_tickers", true);
         this.addRuleDependency("blocks.comparator", "skippable_block_entity", true);
-        this.addRuleDependency("blocks.sculksensor", "skippable_block_entity", true);
-        this.addRuleDependency("blocks.sculksensor", "blockstate_listeners", true);
+        this.addRuleDependency("blocks.sculk_sensor", "skippable_block_entity", true);
+        this.addRuleDependency("blocks.sculk_sensor", "blockstate_listeners", true);
     }
 
     /**

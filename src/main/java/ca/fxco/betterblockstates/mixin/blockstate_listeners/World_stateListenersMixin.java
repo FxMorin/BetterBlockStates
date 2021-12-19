@@ -102,6 +102,5 @@ public abstract class World_stateListenersMixin implements WorldListeners {
             }
         }
         this.iteratingTickingBlockListeners = false;
-        //tickingBlockListeners.forEach((chunkPos, value) -> value.forEach((blockPos, listener) -> ((TickableGameEventListener)listener).tick(self)));
     }
 }

@@ -1,4 +1,4 @@
-package ca.fxco.betterblockstates.mixin.blocks.sculksensor.movable;
+package ca.fxco.betterblockstates.mixin.blocks.sculk_sensor.movable;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

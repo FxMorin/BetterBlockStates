@@ -1,6 +1,6 @@
 package ca.fxco.betterblockstates.mixin.blockstate_listeners;
 
-import ca.fxco.betterblockstates.common.classes.StateListener;
+import ca.fxco.betterblockstates.common.classes.StateSystem;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkSection;
@@ -24,7 +24,7 @@ public class WorldChunk_stateListenersMixin {
             at = @At("RETURN")
     )
     public void onChunkGenerated(World world, ChunkPos pos, UpgradeData upgradeData, ChunkTickScheduler blockTickScheduler, ChunkTickScheduler fluidTickScheduler, long inhabitedTime, ChunkSection[] sectionArrayInitializer, WorldChunk.EntityLoader entityLoader, BlendingData blendingData, CallbackInfo ci) {
-        StateListener.onChunkLoad(self.getWorld(), self);
+        StateSystem.onChunkLoad(self.getWorld(), self);
     }
 
 
@@ -34,7 +34,7 @@ public class WorldChunk_stateListenersMixin {
     )
     public void setLoadedToWorld(boolean loaded, CallbackInfo ci) {
         if (!loaded) {
-            StateListener.onChunkUnload(self.getWorld(), self);
+            StateSystem.onChunkUnload(self.getWorld(), self);
         }
     }
 }
